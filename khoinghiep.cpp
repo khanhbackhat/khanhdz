@@ -55,12 +55,32 @@ void Sinhvien::nhap()
 	fflush(stdin);
 	cout<<"\nNhap Dia Chi: ";cin.getline(diachi,25);
 	cout<<"\nNhap Gioi Tinh: ";cin.getline(gioitinh,4);
-	cout<<"\nNhap Diem Tin 1: ";cin>>tin1;
-	cout<<"\nNhap Diem Tin 2: ";cin>>tin2;
-	cout<<"\nNhap Diem Tin 3: ";cin>>tin3;
-	cout<<"\nNhap Diem Tin 4: ";cin>>tin4;
-	cout<<"\nNhap Diem Ha 1: ";cin>>ha1;
-	cout<<"\nNhap Diem Ha 2: ";cin>>ha2;
+	do{
+		cout<<"\nNhap Diem Tin 1: ";
+		cin>>tin1;
+	}
+	while(tin1<0||tin1>10); 
+	
+	do{
+		cout<<"\nNhap Diem Tin 2: ";cin>>tin2;
+	}
+	while(tin2<0||tin2>10);
+	do{
+		cout<<"\nNhap Diem Tin 3: ";cin>>tin3;
+	}
+	while(tin3<0||tin3>10);
+	do{
+		cout<<"\nNhap Diem Tin 4: ";cin>>tin4;
+	}
+	while(tin4<0||tin4>10);
+	do{
+		cout<<"\nNhap Diem Ha 1: ";cin>>ha1;
+	}
+	while(ha1<0||ha1>10);
+	do{
+		cout<<"\nNhap Diem Ha 2: ";cin>>ha2;
+	}
+	while(ha2<0||ha2>10);
 	dtb=(tin1+tin2+tin3+tin4+ha1+ha2)/6;
 };
 void Sinhvien::hienthi()
@@ -75,6 +95,7 @@ void Sinhvien::xuat()
 int main()
 {
 	Sinhvien x;
+	x.nhap();
 	x.xuat();
 	return 0;
 }
