@@ -61,7 +61,7 @@ void Sinhvien::nhap()
 	cout<<"\nNhap Diem Tin 4: ";cin>>tin4;
 	cout<<"\nNhap Diem Ha 1: ";cin>>ha1;
 	cout<<"\nNhap Diem Ha 2: ";cin>>ha2;
-	dtb=(tin1+tin2+tin3+tin4+ha1+ha2)/5;
+	dtb=(tin1+tin2+tin3+tin4+ha1+ha2)/6;
 };
 void Sinhvien::hienthi()
 {
